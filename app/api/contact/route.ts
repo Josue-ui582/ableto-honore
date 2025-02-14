@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { resend } from '@/lib/resend'; // Utilisation du fichier séparé
+import { resend } from '@/lib/resend';
 
 export async function POST(request: Request) {
   try {
@@ -8,7 +8,7 @@ export async function POST(request: Request) {
 
     const data = await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>',
-      to: ['votre@email.com'], // Remplacez par votre email
+      to: ['votre@email.com'],
       subject: `Nouveau message de contact: ${subject}`,
       html: `
         <h2>Nouveau message de contact</h2>
