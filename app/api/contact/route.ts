@@ -1,12 +1,10 @@
-import { NextResponse } from 'next/server'
-import { Resend } from 'resend'
-
-const resend = new Resend(process.env.RESEND_API_KEY)
+import { NextResponse } from 'next/server';
+import { resend } from '@/lib/resend'; // Utilisation du fichier séparé
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json()
-    const { name, email, subject, message } = body
+    const body = await request.json();
+    const { name, email, subject, message } = body;
 
     const data = await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>',
@@ -20,10 +18,11 @@ export async function POST(request: Request) {
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
-    })
+    });
 
-    return NextResponse.json(data)
+    return NextResponse.json(data);
   } catch (error) {
-    return NextResponse.json({ error: 'Error sending email' }, { status: 500 })
+    console.error('Erreur lors de l’envoi de l’email:', error);
+    return NextResponse.json({ error: 'Error sending email' }, { status: 500 });
   }
 }
