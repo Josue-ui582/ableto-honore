@@ -1,28 +1,21 @@
-import { NextResponse } from 'next/server';
-import { resend } from '@/lib/resend';
+export const dynamic = "force-dynamic";
 
-export async function POST(request: Request) {
+import { NextResponse } from "next/server";
+import { sendEmail } from "@/lib/resend";
+
+export async function POST(req: Request) {
   try {
-    const body = await request.json();
+    const body = await req.json();
+    console.log("Body reçu:", body);
     const { name, email, subject, message } = body;
 
-    const data = await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>',
-      to: ['votre@email.com'],
-      subject: `Nouveau message de contact: ${subject}`,
-      html: `
-        <h2>Nouveau message de contact</h2>
-        <p><strong>Nom:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Sujet:</strong> ${subject}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-      `,
-    });
+    const data = await sendEmail(name, email, subject, message);
 
-    return NextResponse.json(data);
+    console.log("Réponse de Resend:", data);
+    return NextResponse.json({ success: true, data });
   } catch (error) {
-    console.error('Erreur lors de l’envoi de l’email:', error);
-    return NextResponse.json({ error: 'Error sending email' }, { status: 500 });
+    console.error("Erreur Resend:", error);
+    const errMessage = error instanceof Error ? error.message : "Erreur lors de l'envoi du message";
+    return NextResponse.json({ error: errMessage }, { status: 500 });
   }
 }

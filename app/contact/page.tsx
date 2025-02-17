@@ -39,24 +39,27 @@ export default function Contact() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(values),
-      })
-
-      if (response.ok) {
-        toast.success("Message envoyé avec succès!")
-        form.reset()
-      } else {
-        throw new Error("Erreur lors de l'envoi du message")
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Erreur inconnue");
       }
+  
+      toast.success("Message envoyé avec succès !");
+      form.reset();
     } catch (error) {
-      toast.error("Une erreur est survenue. Veuillez réessayer.")
+      console.error("Erreur d'envoi du formulaire :", error);
+      toast.error(error instanceof Error ? error.message : "Erreur inconnue");
     }
   }
+  
 
   return (
     <main className="pt-24 min-h-screen bg-background">
