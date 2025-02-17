@@ -37,29 +37,28 @@ export default function Contact() {
     },
   })
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    try {
-      const response = await fetch("", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+  // async function onSubmit(values: z.infer<typeof formSchema>) {
+  //   try {
+  //     const response = await fetch("", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(values),
+  //     });
   
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Erreur inconnue");
-      }
+  //     if (!response.ok) {
+  //       const errorData = await response.json();
+  //       throw new Error(errorData.error || "Erreur inconnue");
+  //     }
   
-      toast.success("Message envoyé avec succès !");
-      form.reset();
-    } catch (error) {
-      console.error("Erreur d'envoi du formulaire :", error);
-      toast.error(error instanceof Error ? error.message : "Erreur inconnue");
-    }
-  }
-  
+  //     toast.success("Message envoyé avec succès !");
+  //     form.reset();
+  //   } catch (error) {
+  //     console.error("Erreur d'envoi du formulaire :", error);
+  //     toast.error(error instanceof Error ? error.message : "Erreur inconnue");
+  //   }
+  // }
 
   return (
     <main className="pt-24 min-h-screen bg-background">
@@ -114,7 +113,7 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form  className="space-y-6">
                 <FormField
                   control={form.control}
                   name="name"
