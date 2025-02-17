@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Award, BookOpen, BriefcaseIcon, GraduationCap } from "lucide-react"
 import Image from "next/image"
 import ableto from "@/public/ableto.jpg"
+import { training } from "@/data/training"
 
 export default function About() {
   return (
@@ -100,15 +101,18 @@ export default function About() {
           className="mb-20"
         >
           <h2 className="text-3xl font-bold text-center mb-12">Formation</h2>
-          <div className="max-w-2xl mx-auto">
-            <div className="flex items-center gap-4 mb-8">
-              <GraduationCap className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="text-xl font-semibold">Université d'Abomey Calavi</h3>
-                <p className="text-muted-foreground italic">- Licence en Physique & Chimie</p>
-                <p className="text-muted-foreground">2019 - 2024</p>
-              </div>
-            </div>
+          <div className="flex md:flex-row flex-col flex-wrap justify-between">
+          {training.map((item, index) => (
+                <div key={index} className="flex items-center gap-4 mb-8">
+                    <GraduationCap className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                        <h3 className="text-xl font-semibold">{item.school}</h3>
+                        <p className="text-muted-foreground">- {item.formation}</p>
+                        <p className="text-muted-foreground">{item.description}</p>
+                        <p className="text-muted-foreground">{item.year}</p>
+                    </div>
+                </div>
+            ))}
           </div>
         </motion.section>
       </div>

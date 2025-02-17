@@ -87,21 +87,25 @@ export default function Contact() {
                 <Mail className="h-6 w-6 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-muted-foreground">contact@honoreableto.com</p>
+                  <p className="text-muted-foreground">
+                    <a href="mailto:honoreableto117@gmail.com">honoreableto117@gmail.com</a>
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Phone className="h-6 w-6 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold">Téléphone</h3>
-                  <p className="text-muted-foreground">+229 XX XX XX XX</p>
+                  <p className="text-muted-foreground">
+                    <a href="tel:57842135">00229 57842135</a>
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <MapPin className="h-6 w-6 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold">Adresse</h3>
-                  <p className="text-muted-foreground">Bénin</p>
+                  <p className="text-muted-foreground">Bénin & Côte d'Ivoire</p>
                 </div>
               </div>
             </div>

@@ -40,9 +40,18 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-muted-foreground">Bénin</li>
-              <li className="text-muted-foreground">+229 XX XX XX XX</li>
-              <li className="text-muted-foreground">contact@honoreableto.com</li>
+              <li className="text-muted-foreground">
+                <a href="tel:.2290157842135">00229 0157842135</a>
+              </li>
+              <li className="text-muted-foreground">
+                <a href="tel:.2290168634719">00229 0168634719</a>
+              </li>
+              <li className="text-muted-foreground">
+                <a href="mailto:honoreableto117@gmail.com">honoreableto117@gmail.com</a>
+              </li>
+              <li className="text-muted-foreground">
+                <a href="mailto:cameleonservice117@gmail.com">cameleonservice117@gmail.com</a>
+              </li>
             </ul>
           </div>
 

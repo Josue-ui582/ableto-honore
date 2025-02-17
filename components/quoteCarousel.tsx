@@ -10,7 +10,7 @@ export default function QuoteCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % quotes.length);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);

@@ -36,13 +36,13 @@ export default function Home() {
               Entrepreneur passionné & Évangéliste dévoué
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg">
+              <Button asChild size="sm" className="md:${}">
                 <Link href="/contact">
                   Collaborons ensemble
                   <ArrowRight className="ml-2 h-4 w-4 animate-slide" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="sm" variant="outline">
                 <Link href="/experience">
                   Voir mon parcours
                 </Link>
