@@ -43,8 +43,8 @@ export const training: Training[] = [
 
     {
         formation: "Formation pastorale", 
-        school: "Université d'Abomey Calavi", 
+        school: "EBIP", 
         year: 2024, 
-        description: "Description de la formation" 
+        description: "J'ai reçu une formation Pastorale chez EBIP ( Ecole Biblique Inetrnationale de Paul ), mon tuteur est à la fois mon mentor et mon formateur." 
     }
 ]

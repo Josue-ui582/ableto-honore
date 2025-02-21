@@ -12,34 +12,34 @@ export const experience: Experience[] = [
         title: "Commerce de Poisson avec mon Père",
         description: "Début précoce dans le commerce, passant de 50 à 250 cartons vendus par mois. CA généré : 3 millions FCFA (2008-2009)",
         metrics: "100 cartons/mois, Prix unitaire : 24.000 FCFA",
-        image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80"
+        image: "vente-de-poisson.jpg"
       },
       {
         period: "2018 - 2019",
         title: "Première Entreprise Indépendante",
-        description: "Lancement de ma première entreprise de vente de poisson et d'huile. CA : 1.200.000 FCFA",
+        description: "Lancement de ma première entreprise de vente de poisson et d’huile. Grâce à mon expérience aux côtés de mon père, j’ai acquis de solides compétences en vente. Par la suite, j’ai créé ma propre entreprise et réalisé un chiffre d’affaires de 1 200 000 FCFA en une année.",
         metrics: "Financement des études universitaires",
-        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+        image: "fish.avif"
       },
       {
         period: "2021",
-        title: "Commerce d'Accessoires Téléphoniques",
-        description: "Développement d'un commerce au Bénin avec un budget initial de 15.000 FCFA",
-        metrics: "",
-        image: "https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80"
+        title: "Innovation Place",
+        description: "Une entreprise où la communication occupe une place essentielle. Nous accompagnons nos clients dans l’illustration et le développement de leur projet. Ils peuvent également créer leur entreprise et en profiter, même à la retraite. La liberté financière.",
+        metrics: "Croissance de 2000% depuis sa création",
+        image: "inovation.avif"
       },
       {
         period: "2022 - 2023",
-        title: "Expansion Commerciale",
-        description: "Démarrage avec 30.000 FCFA, développement d'un business model efficace. CA : 1.700.000 FCFA en un an",
+        title: "Zoé-Change",
+        description: "Zoé-Change est une entreprise basée en Côte d'Ivoire, spécialisée dans le service de transfert d'argent virtuel à l'échelle nationale et internationale. Avec Zoé, nous aidons n'importe qui à retirer ou envoyer de l'argent sans aucun protocole. On s'en charge.",
         metrics: "Croissance de 5566% en un an",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2815&q=80"
+        image: "zoe.jpg"
       },
       {
         period: "2023 - Présent",
         title: "CAMELEON SERVICE",
-        description: "Création et développement de CAMELEON SERVICE",
+        description: "Création et développement de CAMELEON SERVICE, une entreprise d'import-export spécialisée dans l'achat et la vente de marchandises entre l'Europe et l'Afrique.",
         metrics: "CA : 15.000.000 FCFA",
-        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80"
+        image: "cameleon.avif"
       }
 ]

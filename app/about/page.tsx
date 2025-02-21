@@ -103,13 +103,13 @@ export default function About() {
           <h2 className="text-3xl font-bold text-center mb-12">Formation</h2>
           <div className="flex md:flex-row flex-col flex-wrap justify-between">
           {training.map((item, index) => (
-                <div key={index} className="flex items-center gap-4 mb-8">
+                <div key={index} className="flex w-96 items-start gap-4 mb-8">
                     <GraduationCap className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
-                    <div>
+                    <div className="flex flex-col gap-2">
                         <h3 className="text-xl font-semibold">{item.school}</h3>
-                        <p className="text-muted-foreground">- {item.formation}</p>
+                        <p className="text-muted-foreground underline">{item.formation}</p>
                         <p className="text-muted-foreground">{item.description}</p>
-                        <p className="text-muted-foreground">{item.year}</p>
+                        <p className="text-muted-foreground font-semibold">{item.year}</p>
                     </div>
                 </div>
             ))}

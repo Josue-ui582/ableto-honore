@@ -17,7 +17,7 @@ export default function Experience() {
         >
           <h1 className="text-4xl font-bold mb-6">Mon Parcours Professionnel</h1>
           <p className="text-lg text-muted-foreground">
-            Une histoire de persévérance, d'apprentissage et de croissance continue
+            Une histoire de persévérance, d'apprentissage et de croissance continue, j'ai de solides compétences en vente
           </p>
         </motion.div>
 
